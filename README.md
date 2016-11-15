@@ -9,37 +9,45 @@ Automated procedure to bootstrap a new computer with:
 
 # How to execute bootstrapping?
 - Install Homebrew
-```
+```bash
 TO COMPLETE
 ```
 
 - Install git
-```
+```bash
 brew install git
 ```
 
 - Create git ssh key
-```
+```bash
 TO COMPLETE
 ```
 
 - Clone this repository
-```
+```bash
 mkdir ~/Development
 cd ~/Development
 git clone git@github.com:jibidus/bootstraping.git
 ```
 
-- Run bootstraping script
+- Install ruby
+```bash
+brew install brenv
 ```
-~/Development/bootstrapping/bootstrap.sh
+# TODO Finalize rbenv installation
+
+- Run bootstraping script
+```bash
+ruby ~/Development/bootstrapping/bootstrap.sh
 ```
 
 # TODO
 - [ ] Complete README
-- [ ] Split script
+- [ ] Split scripts
 - [ ] Schedule homebrew upgrade
   * brew upgrade
   * brew-cask.sh upgrade
 - [ ] Ruby upgrade / install
   * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
+- [ ] Add documentation to scripts
+- [ ] Install AppStore app
