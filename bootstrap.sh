@@ -1,9 +1,6 @@
 #!/bin/bash -e
 
-# TODO Install Ruby with rbenv
-
-# TODO Execute ruby
-ruby bootstrap.rb
+/usr/bin/ruby bootstrap.rb
 
 # Git Config
 mkdir ~/Development/Perso

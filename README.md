@@ -10,18 +10,14 @@ Automated procedure to bootstrap a new computer with:
 # How to execute bootstrapping?
 - Install Homebrew
 ```bash
-TO COMPLETE
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
 - Install git
 ```bash
 brew install git
 ```
 
-- Create git ssh key
-```bash
-TO COMPLETE
-```
+- [Generate ssh key dedicated to github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 - Clone this repository
 ```bash
@@ -30,24 +26,23 @@ cd ~/Development
 git clone git@github.com:jibidus/bootstraping.git
 ```
 
-- Install ruby
-```bash
-brew install brenv
-```
-# TODO Finalize rbenv installation
-
 - Run bootstraping script
 ```bash
-ruby ~/Development/bootstrapping/bootstrap.sh
+~/Development/bootstrapping/bootstrap.sh
 ```
 
 # TODO
-- [ ] Complete README
+- [ ] Take inspiration from https://github.com/nicolinuxfr/macOS-post-installation
 - [ ] Split scripts
 - [ ] Schedule homebrew upgrade
+  * brew update
   * brew upgrade
+  * brew cleanup
+  * brew doctor
   * brew-cask.sh upgrade
+  * see https://gist.github.com/denvazh/d077bc6d37e900f92250
 - [ ] Ruby upgrade / install
   * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
 - [ ] Add documentation to scripts
 - [ ] Install AppStore app
+  * See https://github.com/nicolinuxfr/macOS-post-installation/blob/master/post-install.sh
