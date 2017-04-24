@@ -73,11 +73,11 @@ end
 
 # trash files instead of 'rm' command
 brew :install "rmtrash"
-append_bash_profile <<-FILE
+append_bash_profile <<-TEXT
 # rmtrash
 alias trash='rmtrash'
 alias trashdir='rmdirtrash'
-FILE
+TEXT
 
 # Github app to drive github from command line
 brew :install "hub"
@@ -92,6 +92,9 @@ brew :install "gradle"
 
 # Java decompiler
 brew :install "jad"
+# Spring boot CLI
+brew :tap "pivotal/tap"
+brew :install "springboot"
 
 # Google Protocol Buffer
 brew :install "protobuf"
@@ -107,6 +110,24 @@ brew :install "node"
 
 # Better curl
 brew :install "httpie"
+
+# Mysql server and client
+brew :install "mysql"
+
+# Rbenv
+brew :install "rbenv"
+brew :install "ruby-build"
+append_bash_profile <<-TEXT
+# Rbenv
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+TEXT
+
+# git diff good looking
+# https://github.com/so-fancy/diff-so-fancy
+brew :install "diff-so-fancy"
+
+# AsciiDoc text document format manipulation (http://asciidoc.org)
+brew :install "asciidoc"
 
 
 # Brew casks
@@ -157,6 +178,8 @@ brew_cask_install 'dbeaver-community'
 brew_cask_install pg-commander
 
 brew_cask_install 'postgres'
+# TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
+
 
 # Mardkdown editor
 brew_cask_install macdown
@@ -176,3 +199,6 @@ brew_cask_install 'yakyak'
 
 # Remove associated preference files when trashing application
 brew_cask_install 'apptrap'
+
+# yEd Graph Editor from yWorks
+brew_cask_install 'yed'
