@@ -41,6 +41,11 @@ git clone git@github.com:jibidus/bootstraping.git
   * brew doctor
   * brew-cask.sh upgrade
   * see https://gist.github.com/denvazh/d077bc6d37e900f92250
+  * [ ] Tester connexion internet avant de lancer : http://blog.slaunchaman.com/2010/07/01/how-to-run-a-launchdaemon-that-requires-networking/
+  * [ ] Que se passe-t-il si l'ordi est éteint à cette horaire ?
+  * [ ] Demander confirmation avant d'installer l'agent
+  * [ ] Rotation des logs
+  * [ ] Alerter l'utilisateur en cas d'erreur
 - [ ] Ruby upgrade / install
   * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
 - [ ] Add documentation to scripts
