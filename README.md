@@ -8,11 +8,15 @@ Automated procedure to bootstrap a new computer with:
 - Git config
 
 # How to execute bootstrapping?
+
 - Install Homebrew
+
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
 - Install git
+
 ```bash
 brew install git
 ```
@@ -20,6 +24,7 @@ brew install git
 - [Generate ssh key dedicated to github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 - Clone this repository
+
 ```bash
 mkdir ~/Development
 cd ~/Development
@@ -27,11 +32,14 @@ git clone git@github.com:jibidus/bootstraping.git
 ```
 
 - Run bootstraping script
+
 ```bash
 ~/Development/bootstrapping/bootstrap.sh
 ```
 
 # TODO
+- [ ] `brew cask cleanup` to cleans up cached downloads and tracker symlinks
+- [ ] `brew-cask.sh` replaced by `brew cask upgrade` ?
 - [ ] Take inspiration from https://github.com/nicolinuxfr/macOS-post-installation
 - [ ] Split scripts
 - [ ] Schedule homebrew upgrade
@@ -41,6 +49,7 @@ git clone git@github.com:jibidus/bootstraping.git
   * brew doctor
   * brew-cask.sh upgrade
   * see https://gist.github.com/denvazh/d077bc6d37e900f92250
+  * Update .oh-my-git (check if installed) with `git pull`
   * [ ] Tester connexion internet avant de lancer : http://blog.slaunchaman.com/2010/07/01/how-to-run-a-launchdaemon-that-requires-networking/
   * [ ] Que se passe-t-il si l'ordi est éteint à cette horaire ?
   * [ ] Demander confirmation avant d'installer l'agent

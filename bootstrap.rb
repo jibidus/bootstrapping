@@ -202,3 +202,5 @@ brew_cask_install 'apptrap'
 
 # yEd Graph Editor from yWorks
 brew_cask_install 'yed'
+
+brew_cask_install 'java'
