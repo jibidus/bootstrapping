@@ -205,3 +205,23 @@ brew_cask_install 'apptrap'
 
 # yEd Graph Editor from yWorks
 brew_cask_install 'yed'
+
+# Java
+brew_cask_install 'java' # JVM 11+
+execute 'brew tap AdoptOpenJDK/openjdk'
+brew_cask_install 'adoptopenjdk8'
+brew :install 'jenv'
+execute 'jenv enable-plugin export'
+append_bash_profile <<-TEXT
+# Java environment management
+export PATH="$HOME/.jenv/bin:$PATH"
+eval \"$(jenv init -)\"
+TEXT
+# Configure all installed JVM
+require 'pathname'
+Pathname.new('/Library/Java/JavaVirtualMachines')
+        .children
+        .select(&:directory?)
+        .each do |jvm_home|
+    execute "jenv add #{jvm_home.join('Contents/Home/')}"
+end
