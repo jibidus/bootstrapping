@@ -129,6 +129,9 @@ brew :install "diff-so-fancy"
 # AsciiDoc text document format manipulation (http://asciidoc.org)
 brew :install "asciidoc"
 
+# ftp, telnet... commands
+brew :install "inetutils"
+
 
 # Brew casks
 # ---------------------------------------------------------
