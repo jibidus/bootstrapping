@@ -41,6 +41,9 @@ git clone git@github.com:jibidus/bootstraping.git
   * brew doctor
   * brew-cask.sh upgrade
   * see https://gist.github.com/denvazh/d077bc6d37e900f92250
+- [ ] Schedule other updates
+  * [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+  * oh-my-zsh and plugins, themes... see https://gist.github.com/kevin-smets/8568070 (use antigen ?)
 - [ ] Ruby upgrade / install
   * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
 - [ ] Add documentation to scripts
