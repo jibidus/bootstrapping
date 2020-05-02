@@ -53,6 +53,12 @@ check_prerequisite "git" "Git"
 
 
 
+# Oh-my-zsh
+#
+# ---------------------------------------------------------
+
+execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+
 
 # Brew formulas
 # ---------------------------------------------------------
@@ -158,6 +164,9 @@ end
 
 # gitup.co / Git UI
 brew_cask_install gitup
+
+# gitup.co / Git UI
+brew_cask_install iterm2
 
 # SublimeText 3
 brew_cask_install sublim-text

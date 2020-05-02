@@ -18,3 +18,6 @@ cd ${ZSH_CUSTOM}/plugins/zsh-autosuggestions && git pull --rebase
 
 # List of all pending Homebrew cask updates
 ./brew-cask.sh
+
+echo ""
+echo "Install manualy oh-my-zsh stuff (https://gist.github.com/kevin-smets/8568070)"
