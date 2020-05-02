@@ -156,12 +156,6 @@ def associate_files_to(extension, application)
   execute "duti -s #{app_id} #{extension} all"
 end
 
-# Vagrant
-brew_cask_install vagrant
-
-# Github desktop client
-brew_cask_install github-desktop
-
 # gitup.co / Git UI
 brew_cask_install gitup
 
@@ -193,11 +187,6 @@ brew_cask_install 'google-chrome'
 brew_cask_install 'skype'
 brew_cask_install 'slack'
 brew_cask_install 'dropbox'
-brew_cask_install 'atom'
-brew_cask_install 'google-hangouts'
-
-# Hangouts desktop client
-brew_cask_install 'yakyak'
 
 # Remove associated preference files when trashing application
 brew_cask_install 'apptrap'
