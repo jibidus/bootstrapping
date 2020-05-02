@@ -67,6 +67,10 @@ def brew(command, formula)
   execute "brew #{command.to_s} #{formula}"
 end
 
+def brew_cask(command, formula)
+  execute "brew cask #{command.to_s} #{formula}"
+end
+
 ZSHRC = '~/.zshrc'
 require 'fileutils'
 
@@ -141,10 +145,6 @@ brew :install "inetutils"
 # Brew casks
 # ---------------------------------------------------------
 
-def brew_cask_install(formula)
-  execute "brew cask install #{formula}"
-end
-
 def application_id(application)
   app_path = "/Applications/#{application}.app"
   if File.exist?(app_path)
@@ -163,50 +163,50 @@ def associate_files_to(extension, application)
 end
 
 # gitup.co / Git UI
-brew_cask_install gitup
+brew_cask :install 'gitup'
 
 # gitup.co / Git UI
-brew_cask_install iterm2
+brew_cask :install 'iterm2'
 
 # SublimeText 3
-brew_cask_install sublim-text
+brew_cask :install 'sublim-text'
 
 # Dash (offline API documentation)
-brew_cask_install dash
+brew_cask :install 'dash'
 
 # Basecamp desktop client
-brew_cask_install basecamp
+brew_cask :install 'basecamp'
 
 # Database desktop client
-brew_cask_install 'dbeaver-community'
+brew_cask :install 'dbeaver-community'
 
-brew_cask_install pg-commander
+brew_cask :install 'pg-commander'
 
-brew_cask_install 'postgres'
+brew_cask :install 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
 
 
 # Mardkdown editor
-brew_cask_install macdown
+brew_cask :install 'macdown'
 associate_files_to '.md', 'MacDown'
 
 # Applications
-brew_cask_install 'firefox'
-brew_cask_install 'google-chrome'
-brew_cask_install 'skype'
-brew_cask_install 'slack'
-brew_cask_install 'dropbox'
+brew_cask :install 'firefox'
+brew_cask :install 'google-chrome'
+brew_cask :install 'skype'
+brew_cask :install 'slack'
+brew_cask :install 'dropbox'
 
 # Remove associated preference files when trashing application
-brew_cask_install 'apptrap'
+brew_cask :install 'apptrap'
 
 # yEd Graph Editor from yWorks
-brew_cask_install 'yed'
+brew_cask :install 'yed'
 
 # Java
-brew_cask_install 'java' # JVM 11+
+brew_cask :install 'java' # JVM 11+
 execute 'brew tap AdoptOpenJDK/openjdk'
-brew_cask_install 'adoptopenjdk8'
+brew_cask :install 'adoptopenjdk8'
 brew :install 'jenv'
 execute 'jenv enable-plugin export'
 append_zsh_profile <<-TEXT
