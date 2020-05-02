@@ -61,19 +61,18 @@ def brew(command, formula)
   execute "brew #{command.to_s} #{formula}"
 end
 
-BASH_PROFILE = '~/.bash_profile'
+ZSHRC = '~/.zshrc'
 require 'fileutils'
 
-def append_bash_profile(text)
-  # TODO Create ~/.bash_profile if not exist
-  FileUtils.touch(BASH_PROFILE) unless File.exist?(BASH_PROFILE)
-  append_text text, BASH_PROFILE
+def append_zsh_profile(text)
+  FileUtils.touch(ZSHRC) unless File.exist?(ZSHRC)
+  append_text text, ZSHRC
 end
 
 
 # trash files instead of 'rm' command
 brew :install "rmtrash"
-append_bash_profile <<-TEXT
+append_zsh_profile <<-TEXT
 # rmtrash
 alias trash='rmtrash'
 alias trashdir='rmdirtrash'
@@ -117,9 +116,9 @@ brew :install "mysql"
 # Rbenv
 brew :install "rbenv"
 brew :install "ruby-build"
-append_bash_profile <<-TEXT
+append_zsh_profile <<-TEXT
 # Rbenv
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
 TEXT
 
 # git diff good looking
@@ -212,7 +211,7 @@ execute 'brew tap AdoptOpenJDK/openjdk'
 brew_cask_install 'adoptopenjdk8'
 brew :install 'jenv'
 execute 'jenv enable-plugin export'
-append_bash_profile <<-TEXT
+append_zsh_profile <<-TEXT
 # Java environment management
 export PATH="$HOME/.jenv/bin:$PATH"
 eval \"$(jenv init -)\"
