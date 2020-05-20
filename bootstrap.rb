@@ -48,8 +48,8 @@ end
 # Check prerequisites
 # ---------------------------------------------------------
 
-check_prerequisite "brew" "Homebrew"
-check_prerequisite "git" "Git"
+check_prerequisite 'brew', 'Homebrew'
+check_prerequisite 'git', 'Git'
 
 
 
@@ -81,7 +81,7 @@ end
 
 
 # trash files instead of 'rm' command
-brew :install "rmtrash"
+brew :install, 'rmtrash'
 append_zsh_profile <<-TEXT
 # rmtrash
 alias trash='rmtrash'
@@ -89,43 +89,43 @@ alias trashdir='rmdirtrash'
 TEXT
 
 # Github app to drive github from command line
-brew :install "hub"
+brew :install, 'hub'
 
 # Maven with colors
 # https://github.com/jcgay/maven-color
-brew :tap "jcgay/jcgay"
-brew :install "maven-deluxe"
+brew :tap, 'jcgay/jcgay'
+brew :install, 'maven-deluxe'
 
 # Gradle
-brew :install "gradle"
+brew :install, 'gradle'
 
 # Java decompiler
-brew :install "jad"
+brew :install, 'jad'
 # Spring boot CLI
-brew :tap "pivotal/tap"
-brew :install "springboot"
+brew :tap, 'pivotal/tap'
+brew :install, 'springboot'
 
 # Google Protocol Buffer
-brew :install "protobuf"
+brew :install, 'protobuf'
 
 # Javascript
-brew :install "phantomjs"
+brew :install, 'phantomjs'
 
-brew :install "gpg-agent"
-brew :install "scala"
+brew :install, 'gpg-agent'
+brew :install, 'scala'
 
 # Node.js
-brew :install "node"
+brew :install, 'node'
 
 # Better curl
-brew :install "httpie"
+brew :install, 'httpie'
 
 # Mysql server and client
-brew :install "mysql"
+brew :install, 'mysql'
 
 # Rbenv
-brew :install "rbenv"
-brew :install "ruby-build"
+brew :install, 'rbenv'
+brew :install, 'ruby-build'
 append_zsh_profile <<-TEXT
 # Rbenv
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
@@ -133,13 +133,13 @@ TEXT
 
 # git diff good looking
 # https://github.com/so-fancy/diff-so-fancy
-brew :install "diff-so-fancy"
+brew :install, 'diff-so-fancy'
 
 # AsciiDoc text document format manipulation (http://asciidoc.org)
-brew :install "asciidoc"
+brew :install, 'asciidoc'
 
 # ftp, telnet... commands
-brew :install "inetutils"
+brew :install, 'inetutils'
 
 
 # Brew casks
@@ -154,7 +154,7 @@ def application_id(application)
   end
 end
 
-brew :install "duti"
+brew :install, 'duti'
 
 def associate_files_to(extension, application)
   app_id = application_id(application)
@@ -163,51 +163,51 @@ def associate_files_to(extension, application)
 end
 
 # gitup.co / Git UI
-brew_cask :install 'gitup'
+brew_cask :install, 'gitup'
 
 # gitup.co / Git UI
-brew_cask :install 'iterm2'
+brew_cask :install, 'iterm2'
 
 # SublimeText 3
-brew_cask :install 'sublim-text'
+brew_cask :install, 'sublim-text'
 
 # Dash (offline API documentation)
-brew_cask :install 'dash'
+brew_cask :install, 'dash'
 
 # Basecamp desktop client
-brew_cask :install 'basecamp'
+brew_cask :install, 'basecamp'
 
 # Database desktop client
-brew_cask :install 'dbeaver-community'
+brew_cask :install, 'dbeaver-community'
 
-brew_cask :install 'pg-commander'
+brew_cask :install, 'pg-commander'
 
-brew_cask :install 'postgres'
+brew_cask :install, 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
 
 
 # Mardkdown editor
-brew_cask :install 'macdown'
+brew_cask :install, 'macdown'
 associate_files_to '.md', 'MacDown'
 
 # Applications
-brew_cask :install 'firefox'
-brew_cask :install 'google-chrome'
-brew_cask :install 'skype'
-brew_cask :install 'slack'
-brew_cask :install 'dropbox'
+brew_cask :install, 'firefox'
+brew_cask :install, 'google-chrome'
+brew_cask :install, 'skype'
+brew_cask :install, 'slack'
+brew_cask :install, 'dropbox'
 
 # Remove associated preference files when trashing application
-brew_cask :install 'apptrap'
+brew_cask :install, 'apptrap'
 
 # yEd Graph Editor from yWorks
-brew_cask :install 'yed'
+brew_cask :install, 'yed'
 
 # Java
-brew_cask :install 'java' # JVM 11+
+brew_cask :install, 'java' # JVM 11+
 execute 'brew tap AdoptOpenJDK/openjdk'
-brew_cask :install 'adoptopenjdk8'
-brew :install 'jenv'
+brew_cask :install, 'adoptopenjdk8'
+brew :install, 'jenv'
 execute 'jenv enable-plugin export'
 append_zsh_profile <<-TEXT
 # Java environment management
