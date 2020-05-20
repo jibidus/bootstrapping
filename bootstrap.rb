@@ -99,8 +99,6 @@ brew :install, 'maven-deluxe'
 # Gradle
 brew :install, 'gradle'
 
-# Java decompiler
-brew :install, 'jad'
 # Spring boot CLI
 brew :tap, 'pivotal/tap'
 brew :install, 'springboot'
@@ -185,6 +183,9 @@ brew_cask :install, 'pg-commander'
 brew_cask :install, 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
 
+
+# Java decompiler
+brew_cask :install, 'jad'
 
 # Mardkdown editor
 brew_cask :install, 'macdown'
