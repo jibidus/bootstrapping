@@ -153,7 +153,7 @@ brew_cask :install, 'gitup'
 brew_cask :install, 'iterm2'
 
 # SublimeText 3
-brew_cask :install, 'sublim-text'
+brew_cask :install, 'sublime-text'
 
 # Dash (offline API documentation)
 brew_cask :install, 'dash'
