@@ -164,8 +164,6 @@ brew_cask :install, 'basecamp'
 # Database desktop client
 brew_cask :install, 'dbeaver-community'
 
-brew_cask :install, 'pg-commander'
-
 brew_cask :install, 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
 
