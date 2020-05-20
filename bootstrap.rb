@@ -91,11 +91,6 @@ TEXT
 # Github app to drive github from command line
 brew :install, 'hub'
 
-# Maven with colors
-# https://github.com/jcgay/maven-color
-brew :tap, 'jcgay/jcgay'
-brew :install, 'maven-deluxe'
-
 # Gradle
 brew :install, 'gradle'
 
@@ -195,22 +190,11 @@ brew_cask :install, 'apptrap'
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
 
-# Java
-brew_cask :install, 'java' # JVM 11+
-execute 'brew tap AdoptOpenJDK/openjdk'
-brew_cask :install, 'adoptopenjdk8'
-brew :install, 'jenv'
-execute 'jenv enable-plugin export'
-append_zsh_profile <<-TEXT
-# Java environment management
-export PATH="$HOME/.jenv/bin:$PATH"
-eval \"$(jenv init -)\"
-TEXT
-# Configure all installed JVM
-require 'pathname'
-Pathname.new('/Library/Java/JavaVirtualMachines')
-        .children
-        .select(&:directory?)
-        .each do |jvm_home|
-    execute "jenv add #{jvm_home.join('Contents/Home/')}"
-end
+# Jabba (Java version manager)
+execute 'curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh'
+execute 'jabba install adopt@1.8-0'
+
+# Maven with colors
+# https://github.com/jcgay/maven-color
+brew :tap, 'jcgay/jcgay'
+brew :install, 'maven-deluxe'
