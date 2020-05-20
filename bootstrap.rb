@@ -166,6 +166,10 @@ brew_cask :install, 'dbeaver-community'
 
 brew_cask :install, 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
+append_zsh_profile <<-TEXT
+# Postgres
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+TEXT
 
 
 # Java decompiler
