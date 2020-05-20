@@ -21,14 +21,13 @@ brew install git
 
 - Clone this repository
 ```bash
-mkdir ~/Development
-cd ~/Development
-git clone git@github.com:jibidus/bootstraping.git
+git clone git@github.com:jibidus/bootstrapping.git
 ```
 
 - Run bootstraping script
 ```bash
-~/Development/bootstrapping/bootstrap.sh
+cd bootstrapping
+./bootstrap.sh
 ```
 
 # TODO
