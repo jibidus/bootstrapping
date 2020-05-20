@@ -103,17 +103,8 @@ brew :install, 'gradle'
 brew :tap, 'pivotal/tap'
 brew :install, 'springboot'
 
-# Google Protocol Buffer
-brew :install, 'protobuf'
-
-# Javascript
-brew :install, 'phantomjs'
-
-brew :install, 'gpg-agent'
-brew :install, 'scala'
-
-# Node.js
-brew :install, 'node'
+# Node Version Manager
+execute 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
 
 # Better curl
 brew :install, 'httpie'
