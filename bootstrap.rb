@@ -112,7 +112,7 @@ brew :install, 'rbenv'
 brew :install, 'ruby-build'
 append_zsh_profile <<-TEXT
 # Rbenv
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 TEXT
 
 # git diff good looking
