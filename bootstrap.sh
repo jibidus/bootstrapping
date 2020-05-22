@@ -12,3 +12,5 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
 # TODO Install apps from AppStore
+
+echo "Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
