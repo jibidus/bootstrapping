@@ -99,7 +99,14 @@ brew :tap, 'pivotal/tap'
 brew :install, 'springboot'
 
 # Node Version Manager
-execute 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
+brew :install, 'nvm'
+execute 'mkdir ~/.nvm'
+append_zsh_profile <<-TEXT
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+TEXT
 
 # Better curl
 brew :install, 'httpie'
