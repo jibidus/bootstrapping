@@ -168,9 +168,6 @@ brew_cask :install, 'dash'
 # Basecamp desktop client
 brew_cask :install, 'basecamp'
 
-# Database desktop client
-brew_cask :install, 'dbeaver-community'
-
 brew_cask :install, 'postgres'
 # TODO Update PATH with /Applications/Postgres.app/Contents/Versions/latest/bin
 append_zsh_profile <<-TEXT
