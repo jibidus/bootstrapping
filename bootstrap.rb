@@ -71,7 +71,7 @@ def brew_cask(command, formula)
   execute "brew cask #{command.to_s} #{formula}"
 end
 
-ZSHRC = '~/.zshrc'
+ZSHRC = File.join(Dir.home, ".zshrc")
 require 'fileutils'
 
 def append_zsh_profile(text)
