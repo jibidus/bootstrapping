@@ -198,10 +198,11 @@ brew_cask :install, 'yed'
 
 # Jabba (Java version manager)
 execute 'curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh'
-execute 'jabba install adopt@1.8-0'
+execute 'source ~/.jabba/jabba.sh && jabba install adopt@1.8-0'
 # Jenv
 brew :install, 'jenv'
-execute 'eval $(jenv init -) && unset JAVA_TOOL_OPTIONS && jenv add "$(jabba which adopt@1.8-0)/Contents/Home/"'
+execute 'source ~/.jabba/jabba.sh && eval "$(jenv init -)" && unset JAVA_TOOL_OPTIONS && jenv add "$(jabba which adopt@1.8-0)/Contents/Home/"'
+execute 'jenv global 1.8'
 
 # Maven with colors
 # https://github.com/jcgay/maven-color
