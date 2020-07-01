@@ -132,6 +132,8 @@ brew :install, 'asciidoc'
 # ftp, telnet... commands
 brew :install, 'inetutils'
 
+# cat alternative (https://github.com/sharkdp/bat)
+brew :install, 'bat'
 
 # Brew casks
 # ---------------------------------------------------------
