@@ -146,9 +146,6 @@ brew_cask :install, 'sublime-text'
 # Dash (offline API documentation)
 brew_cask :install, 'dash'
 
-# Java decompiler
-brew_cask :install, 'jad'
-
 # Mardkdown editor
 brew_cask :install, 'macdown'
 associate_files_to '.md', 'MacDown'
