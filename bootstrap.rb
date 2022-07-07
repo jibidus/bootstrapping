@@ -166,3 +166,9 @@ brew_cask :install, 'yed'
 # https://github.com/jcgay/maven-color
 brew :tap, 'jcgay/jcgay'
 brew :install, 'maven-deluxe'
+
+# Dependencies of asdf
+# (https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
+brew :install, 'spack'
+brew :install, 'coreutils'
+execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0'
