@@ -81,12 +81,7 @@ end
 
 
 # trash files instead of 'rm' command
-brew :install, 'rmtrash'
-append_zsh_profile <<-TEXT
-# rmtrash
-alias trash='rmtrash'
-alias trashdir='rmdirtrash'
-TEXT
+brew :install, 'trash'
 
 # Github app to drive github from command line
 brew :install, 'hub'
