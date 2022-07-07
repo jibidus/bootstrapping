@@ -148,7 +148,6 @@ brew_cask :install, 'dash'
 
 # Mardkdown editor
 brew_cask :install, 'macdown'
-associate_files_to '.md', 'MacDown'
 
 # Applications
 brew_cask :install, 'firefox'
