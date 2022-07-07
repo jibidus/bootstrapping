@@ -90,8 +90,8 @@ brew :install, 'hub'
 brew :install, 'gradle'
 
 # Spring boot CLI
-brew :tap, 'pivotal/tap'
-brew :install, 'springboot'
+brew :tap, 'spring-io/tap'
+brew :install, 'spring-boot'
 
 # Better curl
 brew :install, 'httpie'
