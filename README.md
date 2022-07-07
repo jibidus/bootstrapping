@@ -17,8 +17,6 @@ Automated procedure to bootstrap a new computer with:
 brew install git
 ```
 
-- [Generate ssh key dedicated to github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-
 - Clone this repository
 ```bash
 git clone git@github.com:jibidus/bootstrapping.git
