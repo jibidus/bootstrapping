@@ -160,6 +160,9 @@ brew_cask :install, 'apptrap'
 # The Spotlight of the user interface, in order to control the Mac from keyboard
 brew_cask :install, 'shortcat'
 
+# Move window with keyboard
+brew_cask :install, 'spectacle'
+
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
 
