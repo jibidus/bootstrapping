@@ -157,6 +157,9 @@ brew_cask :install, 'dropbox'
 # Remove associated preference files when trashing application
 brew_cask :install, 'apptrap'
 
+# The Spotlight of the user interface, in order to control the Mac from keyboard
+brew_cask :install, 'shortcat'
+
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
 
