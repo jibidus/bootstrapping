@@ -50,7 +50,6 @@ check_prerequisite 'brew', 'Homebrew'
 check_prerequisite 'git', 'Git'
 
 
-
 # Oh-my-zsh
 #
 # ---------------------------------------------------------
@@ -77,6 +76,11 @@ def append_zsh_profile(text)
   append_text text, ZSHRC
 end
 
+# Git: ignore all .DS_Store
+global_gitignore="~/.gitignore"
+execute "git config --global core.excludesFile '#{global_gitignore}'"
+FileUtils.touch(global_gitignore) unless File.exist?(global_gitignore)
+append_text ".DS_Store", global_gitignore
 
 # trash files instead of 'rm' command
 brew :install, 'trash'
