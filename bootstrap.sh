@@ -23,6 +23,7 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 # TODO Manage retry
 # TODO Make script runnable multiple times
 # TODO Install apps from AppStore
+# TODO Install asdf automatically + plugins
 
 echo "- Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
 echo "- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
