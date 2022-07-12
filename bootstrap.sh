@@ -21,7 +21,6 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 # TODO See https://github.com/eduncan911/dotfiles
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
-# TODO Stop ruby script on first error
 # TODO Make script runnable multiple times
 # TODO Install apps from AppStore
 

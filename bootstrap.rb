@@ -22,17 +22,15 @@ end
 require 'open3'
 
 def execute(command)
-  Open3.popen2e command do |stdin, stdout_err, wait_thr|
-    while line = stdout_err.gets
+  Open3.popen2e command do |_, stdout_err, wait_thr|
+    while (line = stdout_err.gets)
       log line
     end
 
     exit_status = wait_thr.value
     unless exit_status.success?
-      log "Command failed with following exit status: #{exit_status}"
-      log "Executed command: #{command}"
+      raise "Command '#{command}' failed with exit status #{exit_status}"
     end
-    return exit_status.success?
   end
 end
 
