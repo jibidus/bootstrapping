@@ -28,6 +28,6 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 echo "- Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
 echo "- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
 echo "- Install asdf: https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies"
-echo "- Install docker: https://www.docker.com/get-started/"
 echo "- Install asdf plugin in ~/.zshrc"
+echo "- Install docker: https://www.docker.com/get-started/"
 echo "- Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
