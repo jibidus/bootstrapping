@@ -31,3 +31,4 @@ echo "- Install asdf: https://asdf-vm.com/guide/getting-started.html#_1-install-
 echo "- Install asdf plugin in ~/.zshrc"
 echo "- Install docker: https://www.docker.com/get-started/"
 echo "- Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
+echo "- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
