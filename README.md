@@ -31,7 +31,7 @@ cd bootstrapping
 # TODO
 - [ ] Take inspiration from https://github.com/nicolinuxfr/macOS-post-installation
 - [ ] Split scripts
-- [ ] Schedule updates (update.sh)
+- [ ] Schedule updates (update-all.sh)
 - [ ] Ruby upgrade / install
   * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
 - [ ] Add documentation to scripts
