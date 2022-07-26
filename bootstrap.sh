@@ -22,13 +22,13 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
 # TODO Make script runnable multiple times
-# TODO Install apps from AppStore
-# TODO Install asdf automatically + plugins
 
 echo "- Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
 echo "- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
 echo "- Install asdf: https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies"
-echo "- Install asdf plugin in ~/.zshrc"
+echo "- Install asdf plugins in ~/.zshrc"
 echo "- Install docker: https://www.docker.com/get-started/"
 echo "- Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
 echo "- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
+echo "- Automate oh-my-zsh-update: https://github.com/ohmyzsh/ohmyzsh"
+echo "- Automate oh-my-zsh plugin updates: https://github.com/TamCore/autoupdate-oh-my-zsh-plugins"
