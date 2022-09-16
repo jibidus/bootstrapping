@@ -114,6 +114,9 @@ brew :install, 'inetutils'
 # cat alternative (https://github.com/sharkdp/bat)
 brew :install, 'bat'
 
+# json formatter (https://stedolan.github.io/jq/)
+brew :install, 'jq'
+
 # Brew casks
 # ---------------------------------------------------------
 
