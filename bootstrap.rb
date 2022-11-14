@@ -190,3 +190,8 @@ execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0'
 brew_cask :install 'openinterminal-lite'
 # Open new tab (not window)
 execute "defaults write com.googlecode.iterm2 OpenFileInNewWindows -bool false"
+
+# chezmoi
+# www.chezmoi.io
+brew :install, 'chezmoi'
+execute 'chezmoi init --apply jibidus'
