@@ -195,3 +195,7 @@ execute "defaults write com.googlecode.iterm2 OpenFileInNewWindows -bool false"
 # www.chezmoi.io
 brew :install, 'chezmoi'
 execute 'chezmoi init --apply jibidus'
+
+# Postman alternative
+# paw.cloud
+brew :install, 'RapidAPI'
