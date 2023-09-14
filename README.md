@@ -19,7 +19,7 @@ brew install git
 
 - Clone this repository
 ```bash
-git clone git@github.com:jibidus/bootstrapping.git
+git clone https://github.com/jibidus/bootstrapping.git
 ```
 
 - Run bootstraping script
