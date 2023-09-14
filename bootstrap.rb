@@ -187,7 +187,7 @@ execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0'
 
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
-brew_cask :install 'openinterminal-lite'
+brew_cask :install, 'openinterminal-lite'
 # Open new tab (not window)
 execute "defaults write com.googlecode.iterm2 OpenFileInNewWindows -bool false"
 
