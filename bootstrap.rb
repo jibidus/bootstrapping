@@ -124,27 +124,9 @@ brew :install, 'jq'
 # Brew casks
 # ---------------------------------------------------------
 
-def application_id(application)
-  app_path = "/Applications/#{application}.app"
-  if File.exist?(app_path)
-    return `mdls -name kMDItemCFBundleIdentifier -r #{app_path}`
-  else
-    raise "Application #{application} not found (in /Applications)"
-  end
-end
-
 # Command line tool to set file type / application associations
 # (https://github.com/moretension/duti/)
 brew :install, 'duti'
-
-def associate_files_to(extension, application)
-  app_id = application_id(application)
-  log "Application Id found for application #{application}: #{app_id}"
-  execute "duti -s #{app_id} #{extension} all"
-end
-
-# gitup.co / Git UI
-brew_cask :install, 'gitup'
 
 # Terminal alternative for macOS
 brew_cask :install, 'iterm2'
@@ -163,13 +145,9 @@ brew_cask :install, 'firefox'
 brew_cask :install, 'google-chrome'
 brew_cask :install, 'skype'
 brew_cask :install, 'slack'
-brew_cask :install, 'dropbox'
 
 # Remove associated preference files when trashing application
 brew_cask :install, 'apptrap'
-
-# The Spotlight of the user interface, in order to control the Mac from keyboard
-brew_cask :install, 'shortcat'
 
 # Move window with keyboard
 brew_cask :install, 'spectacle'
