@@ -53,9 +53,10 @@ check_prerequisite 'git', 'Git'
 # Oh-my-zsh
 #
 # ---------------------------------------------------------
-
-execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
-
+oh_my_zsh_home = File.join(Dir.home, ".oh-my-zsh")
+unless Dir.exist?(oh_my_zsh_home)
+  execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+end
 
 # Brew formulas
 # ---------------------------------------------------------
@@ -77,10 +78,13 @@ def append_zsh_profile(text)
 end
 
 # Git: ignore all .DS_Store
-global_gitignore="~/.gitignore"
+global_gitignore = File.join(Dir.home, ".gitignore")
 execute "git config --global core.excludesFile '#{global_gitignore}'"
-FileUtils.touch(global_gitignore) unless File.exist?(global_gitignore)
-append_text ".DS_Store", global_gitignore
+execute("touch #{global_gitignore}")
+ignored_pattern = ".DS_Store"
+unless File.readlines(global_gitignore).any?{ |l| l[ignored_pattern] }
+    append_text ignored_pattern, global_gitignore
+end
 
 # trash files instead of 'rm' command
 brew :install, 'trash'
