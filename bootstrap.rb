@@ -165,7 +165,10 @@ brew :install, 'mvndaemon/homebrew-mvnd/mvnd'
 # (https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
 brew :install, 'spack'
 brew :install, 'coreutils'
-execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0'
+asdf_home = File.join(Dir.home, ".asdf")
+unless Dir.exist?(asdf_home)
+    execute 'git clone https://github.com/asdf-vm/asdf.git #{asdf_home} --branch v0.13.1'
+end
 
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
