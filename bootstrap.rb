@@ -184,3 +184,6 @@ execute 'chezmoi init --apply jibidus'
 # Postman alternative
 # paw.cloud
 brew :install, 'RapidAPI'
+
+# Notion
+brew_cask :install, 'notion'
