@@ -36,10 +36,10 @@ end
 
 
 def check_prerequisite(executable, application_name)
-  unless execute("which #{executable}")
-    log "Prerequisite \"#{application_name}\" not installed (executable \"#{executable}\" not found in PATH environment variable)"
-    exit 1
-  end
+  execute("which #{executable}")
+rescue RuntimeError
+  log "Prerequisite \"#{application_name}\" not installed (executable \"#{executable}\" not found in PATH environment variable)"
+  exit 1
 end
 
 
