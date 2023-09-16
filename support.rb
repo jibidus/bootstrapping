@@ -35,8 +35,7 @@ end
 def check_prerequisite(executable, application_name)
   execute("which #{executable}")
 rescue RuntimeError
-  log "Prerequisite \"#{application_name}\" not installed (executable \"#{executable}\" not found in PATH environment variable)"
-  exit 1
+  raise "Prerequisite '#{application_name}' not installed (executable '#{executable}' not found in PATH environment variable)"
 end
 
 
