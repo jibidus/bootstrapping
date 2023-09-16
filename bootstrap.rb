@@ -98,7 +98,6 @@ brew_cask :install, 'yed'
 # Maven with colors
 # https://github.com/jcgay/maven-color
 brew :tap, 'jcgay/jcgay'
-brew :install, 'maven-deluxe'
 brew :install, 'mvndaemon/homebrew-mvnd/mvnd'
 
 # Dependencies of asdf
