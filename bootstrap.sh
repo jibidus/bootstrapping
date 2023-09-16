@@ -32,4 +32,3 @@ echo "- Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki
 echo "- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
 echo "- Automate oh-my-zsh-update: https://github.com/ohmyzsh/ohmyzsh"
 echo "- Automate oh-my-zsh plugin updates: https://github.com/TamCore/autoupdate-oh-my-zsh-plugins"
-echo "- Add reminder to run update-all.sh every month"
