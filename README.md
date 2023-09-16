@@ -1,11 +1,11 @@
-# Bootsrapping
+# Bootsrap new laptop
 
-**WARNING** Under development
-
-Automated procedure to bootstrap a new computer with:
-- Brew formula
-- Brew casks
-- Git config
+Automated procedure to bootstrap a new computer with all necessary tools like:
+- oh-my-zsh
+- iterm2
+- asdf
+- chezmoi
+- git config
 
 # How to execute bootstrapping?
 - Install Homebrew
