@@ -14,6 +14,9 @@ oh_my_zsh_home = File.join(Dir.home, ".oh-my-zsh")
 unless Dir.exist?(oh_my_zsh_home)
   execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 end
+manual_operations << "Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
+manual_operations << "Automate oh-my-zsh-update: https://github.com/ohmyzsh/ohmyzsh"
+manual_operations << "Automate oh-my-zsh plugin updates: https://github.com/TamCore/autoupdate-oh-my-zsh-plugins"
 
 # Git config
 # ---------------------------------------------------------
@@ -69,6 +72,7 @@ brew :install, 'duti'
 
 # Terminal alternative for macOS
 brew_cask :install, 'iterm2'
+manual_operations << "Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
 
 # SublimeText 3
 brew_cask :install, 'sublime-text'
@@ -90,6 +94,7 @@ brew_cask :install, 'apptrap'
 
 # Move window with keyboard
 brew_cask :install, 'spectacle'
+manual_operations << "Modify Spectacle shortcut (Ctrl+Cmd instead of Option+Cmd)"
 
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
@@ -127,8 +132,10 @@ brew :install, 'RapidAPI'
 # Notion
 brew_cask :install, 'notion'
 
-return if manual_operations.empty?
 puts "There are some manual operations left:"
+puts "\t- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
+puts "\t- Install docker: https://www.docker.com/get-started/"
+puts "\t- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
 manual_operations.each do |operation|
     puts "\t- #{operation}"
 end

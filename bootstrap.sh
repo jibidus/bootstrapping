@@ -22,12 +22,3 @@ ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
 # TODO Make script runnable multiple times
-
-echo "- Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
-echo "- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
-echo "- Install docker: https://www.docker.com/get-started/"
-echo "- Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
-echo "- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
-echo "- Automate oh-my-zsh-update: https://github.com/ohmyzsh/ohmyzsh"
-echo "- Automate oh-my-zsh plugin updates: https://github.com/TamCore/autoupdate-oh-my-zsh-plugins"
-echo "- Modify Spectacle shortcut (Ctrl+Cmd instead of Option+Cmd)"
