@@ -1,6 +1,8 @@
 #require_relative "traces.rb"
 require "support"
 
+manual_operations = []
+
 # Check prerequisites
 # ---------------------------------------------------------
 check_prerequisite 'brew', 'Homebrew'
@@ -105,6 +107,7 @@ asdf_home = File.join(Dir.home, ".asdf")
 unless Dir.exist?(asdf_home)
     execute 'git clone https://github.com/asdf-vm/asdf.git #{asdf_home} --branch v0.13.1'
 end
+manual_operations << "Register asdf as new zsh plugin in ~/.zshrc (search 'plugins=()')"
 
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
@@ -123,3 +126,9 @@ brew :install, 'RapidAPI'
 
 # Notion
 brew_cask :install, 'notion'
+
+return if manual_operations.empty?
+puts "There are some manual operations left:"
+manual_operations.each do |operation|
+    puts "\t- #{operation}"
+end
