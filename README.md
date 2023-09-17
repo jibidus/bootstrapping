@@ -1,3 +1,5 @@
+![tests](https://github.com/jibidus/bootstrapping/actions/workflows/tests.yml/badge.svg)
+
 # Bootsrap new laptop
 
 Automated procedure to bootstrap a new computer with all necessary tools like:
