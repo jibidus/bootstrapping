@@ -7,17 +7,14 @@ check_prerequisite 'brew', 'Homebrew'
 check_prerequisite 'git', 'Git'
 
 # Oh-my-zsh
-#
 # ---------------------------------------------------------
 oh_my_zsh_home = File.join(Dir.home, ".oh-my-zsh")
 unless Dir.exist?(oh_my_zsh_home)
   execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 end
 
-# Brew formulas
+# Git config
 # ---------------------------------------------------------
-
-# Git: ignore all .DS_Store
 global_gitignore = File.join(Dir.home, ".gitignore")
 execute "git config --global core.excludesFile '#{global_gitignore}'"
 execute("touch #{global_gitignore}")
@@ -25,6 +22,9 @@ ignored_pattern = ".DS_Store"
 unless File.readlines(global_gitignore).any?{ |l| l[ignored_pattern] }
     append_text ignored_pattern, global_gitignore
 end
+
+# Brew formulas
+# ---------------------------------------------------------
 
 # trash files instead of 'rm' command
 brew :install, 'trash'
@@ -60,9 +60,6 @@ brew :install, 'bat'
 
 # json formatter (https://stedolan.github.io/jq/)
 brew :install, 'jq'
-
-# Brew casks
-# ---------------------------------------------------------
 
 # Command line tool to set file type / application associations
 # (https://github.com/moretension/duti/)
