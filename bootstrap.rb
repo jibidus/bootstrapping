@@ -116,6 +116,22 @@ unless Dir.exist?(asdf_home)
 end
 manual_operations << "Register asdf as new zsh plugin in ~/.zshrc (search 'plugins=()')"
 
+# Java 11
+execute "asdf plugin add java"
+execute "asdf install java temurin-11.0.19+7"
+execute "asdf global java temurin-11.0.19+7"
+append_zsh_profile <<-TEXT
+# set JAVA_HOME from asdf
+. ~/.asdf/plugins/java/set-java-home.zsh
+TEXT
+asdfrc_content = <<-TEXT
+# This replaces /??? with asdf java version
+java_macos_integration_enable = yes
+# Plugins with support can read the versions files used by other version managers, for example, .ruby-version in the case of Ruby's rbenv.
+legacy_version_file = yes
+TEXT
+append_text asdfrc_content, "~/.asdfrc"
+
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
 brew_cask :install, 'openinterminal-lite'
