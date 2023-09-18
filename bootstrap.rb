@@ -73,6 +73,8 @@ brew :install, 'duti'
 # Terminal alternative for macOS
 brew_cask :install, 'iterm2'
 manual_operations << "Configure iTerm2 like this: https://gist.github.com/kevin-smets/8568070"
+# TODO: automate this
+# TODO: update custom plugins automatically
 
 # SublimeText 3
 brew_cask :install, 'sublime-text'
