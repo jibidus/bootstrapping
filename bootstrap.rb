@@ -157,3 +157,7 @@ puts "\t- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#
 manual_operations.each do |operation|
     puts "\t- #{operation}"
 end
+
+# Dive is a tool to explore docker image layers
+# https://github.com/wagoodman/dive
+brew :install, 'RapidAPI'
