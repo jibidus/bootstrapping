@@ -96,7 +96,12 @@ brew_cask :install, 'apptrap'
 
 # Move window with keyboard
 brew_cask :install, 'spectacle'
-manual_operations << "Modify Spectacle shortcut (Ctrl+Cmd instead of Option+Cmd)"
+manual_operations <<-TEXT
+Modify Spectacle shortcut :
+    - Disable Center
+    - Disable corner position shortcuts
+    - replace Option+Cmd+arrows by Ctrl+Cmd+arrows
+TEXT
 
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
