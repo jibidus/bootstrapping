@@ -150,6 +150,10 @@ brew :install, 'RapidAPI'
 # Notion
 brew_cask :install, 'notion'
 
+# Dive is a tool to explore docker image layers
+# https://github.com/wagoodman/dive
+brew :install, 'dive'
+
 puts "There are some manual operations left:"
 puts "\t- Install Dbeaver Community Edition manually: https://dbeaver.io/download/"
 puts "\t- Install docker: https://www.docker.com/get-started/"
@@ -157,7 +161,3 @@ puts "\t- Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#
 manual_operations.each do |operation|
     puts "\t- #{operation}"
 end
-
-# Dive is a tool to explore docker image layers
-# https://github.com/wagoodman/dive
-brew :install, 'dive'
