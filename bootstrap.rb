@@ -1,5 +1,5 @@
 #require_relative "traces.rb"
-require "support"
+require_relative "support.rb"
 
 manual_operations = []
 
