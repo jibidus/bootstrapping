@@ -160,4 +160,4 @@ end
 
 # Dive is a tool to explore docker image layers
 # https://github.com/wagoodman/dive
-brew :install, 'RapidAPI'
+brew :install, 'dive'
