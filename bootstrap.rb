@@ -88,8 +88,7 @@ brew_cask :install, 'macdown'
 # Applications
 brew_cask :install, 'firefox'
 brew_cask :install, 'google-chrome'
-brew_cask :install, 'skype'
-brew_cask :install, 'slack'
+#brew_cask :install, 'slack'
 
 # Remove associated preference files when trashing application
 brew_cask :install, 'apptrap'
