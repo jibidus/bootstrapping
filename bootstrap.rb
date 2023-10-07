@@ -121,9 +121,9 @@ end
 manual_operations << "Register asdf as new zsh plugin in ~/.zshrc (search 'plugins=()')"
 
 # Java 11
-execute "asdf plugin add java"
-execute "asdf install java temurin-11.0.19+7"
-execute "asdf global java temurin-11.0.19+7"
+additional_operations.add "asdf plugin add java"
+additional_operations.add "asdf install java temurin-11.0.19+7"
+additional_operations.add "asdf global java temurin-11.0.19+7"
 append_zsh_profile <<-TEXT
 # set JAVA_HOME from asdf
 . ~/.asdf/plugins/java/set-java-home.zsh
