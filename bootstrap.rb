@@ -134,7 +134,8 @@ java_macos_integration_enable = yes
 # Plugins with support can read the versions files used by other version managers, for example, .ruby-version in the case of Ruby's rbenv.
 legacy_version_file = yes
 TEXT
-append_text asdfrc_content, "~/.asdfrc"
+asdfrc = File.join(Dir.home, ".asdfrc")
+append_text asdfrc_content, asdfrc
 
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
