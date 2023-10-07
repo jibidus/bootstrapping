@@ -54,3 +54,26 @@ def append_zsh_profile(text)
   FileUtils.touch(ZSHRC) unless File.exist?(ZSHRC)
   append_text text, ZSHRC
 end
+
+class AdditionalOperations
+
+    def initialize
+        @instruction = [
+          "Install Dbeaver Community Edition manually: https://dbeaver.io/download/",
+          "Install docker: https://www.docker.com/get-started/",
+          "Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
+        ]
+    end
+
+    def add(instruction)
+        log instruction
+        @instruction << instruction
+    end
+
+    def print
+        log "There are some manual operations left:"
+        @instruction.each do |instruction|
+            log "\t- #{instruction}"
+        end
+    end
+end
