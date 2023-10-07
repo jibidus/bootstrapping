@@ -1,5 +1,10 @@
 #!/bin/bash -e
 
+# Upgrade Homebrew
+brew update
+brew upgrade
+brew cleanup
+
 # Install ruby requirements (open3 gem)
 brew install rbenv ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zprofile
