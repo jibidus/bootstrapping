@@ -1,6 +1,13 @@
 name: Run tests
 on: [push]
 jobs:
+  e2e-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          ./bootstrap.sh
   run-rspec-tests:
     runs-on: macos-latest
     steps:
