@@ -20,10 +20,11 @@ gem install open3
 # Git Config
 mkdir -p ~/Development
 cd ~/Development
-git clone git@github.com:jibidus/dotfiles.git
+git clone https://github.com/jibidus/dotfiles.git
 ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
 
 # TODO See https://github.com/eduncan911/dotfiles
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
 # TODO Make script runnable multiple times
+# TODO Register new github ssh key and clone dotfiles and bootstrapping repositories with it
