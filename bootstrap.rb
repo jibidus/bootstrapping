@@ -122,6 +122,7 @@ additional_operations.add "Register asdf as new zsh plugin in ~/.zshrc (search '
 
 # Java 11
 additional_operations.add "asdf plugin add java"
+additional_operations.add "asdf plugin-add graalvm https://github.com/asdf-community/asdf-graalvm.git"
 additional_operations.add "asdf install java temurin-11.0.19+7"
 additional_operations.add "asdf global java temurin-11.0.19+7"
 append_zsh_profile <<-TEXT
