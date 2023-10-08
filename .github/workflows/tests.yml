@@ -8,7 +8,7 @@ jobs:
       - run: |
           /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
           ./bootstrap.sh
-  run-rspec-tests:
+  rspec:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
