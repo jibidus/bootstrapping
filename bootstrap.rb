@@ -97,9 +97,9 @@ brew_cask :install, 'apptrap'
 brew_cask :install, 'spectacle'
 additional_operations.add <<-TEXT
 Modify Spectacle shortcut :
-    - Disable Center
-    - Disable corner position shortcuts
-    - replace Option+Cmd+arrows by Ctrl+Cmd+arrows
+\t\t* Disable Center
+\t\t* Disable corner position shortcuts
+\t\t* replace Option+Cmd+arrows by Ctrl+Cmd+arrows
 TEXT
 
 # yEd Graph Editor from yWorks
