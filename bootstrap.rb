@@ -159,4 +159,8 @@ brew_cask :install, 'notion'
 # https://github.com/wagoodman/dive
 brew :install, 'dive'
 
+# Disk Inventory X
+# https://www.derlien.com
+brew_cask :install, 'disk-inventory-x'
+
 additional_operations.print
