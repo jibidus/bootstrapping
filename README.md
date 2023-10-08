@@ -39,5 +39,3 @@ cd bootstrapping
 - [ ] Add documentation to scripts
 - [ ] Install AppStore app
 - [ ] Replace rbenv by asdf in bootstrap.sh
-- [ ] Add CI
-  * See https://github.com/nicolinuxfr/macOS-post-installation/blob/master/post-install.sh
