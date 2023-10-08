@@ -17,12 +17,6 @@ gem install open3
 
 /usr/bin/ruby bootstrap.rb
 
-# Git Config
-mkdir -p ~/Development
-cd ~/Development
-git clone https://github.com/jibidus/dotfiles.git
-ln -s ~/Development/dotfiles/.gitconfig ~/.gitconfig
-
 # TODO See https://github.com/eduncan911/dotfiles
 # TODO COMPLETE with https://github.com/lra/mackup
 # TODO Manage retry
