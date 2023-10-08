@@ -3,29 +3,18 @@
 # Bootsrap new laptop
 
 Automated procedure to bootstrap a new computer with all necessary tools like:
-- oh-my-zsh
-- iterm2
-- asdf
-- chezmoi
-- git config
 
-# How to execute bootstrapping?
-- Install Homebrew
+- `oh-my-zsh`
+- `iterm2`
+- `asdf`
+- `chezmoi`
+
+# How to bootstrap a new laptop?
+
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-- Install git
-```bash
 brew install git
-```
-
-- Clone this repository
-```bash
 git clone https://github.com/jibidus/bootstrapping.git
-```
-
-- Run bootstraping script
-```bash
 cd bootstrapping
 ./bootstrap.sh
 ```
