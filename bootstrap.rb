@@ -94,13 +94,8 @@ brew_cask :install, 'google-chrome'
 brew_cask :install, 'apptrap'
 
 # Move window with keyboard
-brew_cask :install, 'spectacle'
-additional_operations.add <<-TEXT
-Modify Spectacle shortcut :
-\t\t* Disable Center
-\t\t* Disable corner position shortcuts
-\t\t* replace Option+Cmd+arrows by Ctrl+Cmd+arrows
-TEXT
+brew_cask :install, 'rectangle'
+additional_operations.add "Import Rectangle configuration from 'assets/rectangle-config.json'"
 
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
