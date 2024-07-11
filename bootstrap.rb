@@ -160,4 +160,9 @@ brew :install, 'dive'
 # https://www.derlien.com
 brew_cask :install, 'disk-inventory-x'
 
+# Sign commit with a GPG key
+brew :install, 'gpg-suite'
+additional_operations.add "Generate a new GPG key: https://docs.github.com/fr/authentication/managing-commit-signature-verification/generating-a-new-gpg-key"
+additional_operations.add "Sign all commit with this GPG key: https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits"
+
 additional_operations.print
