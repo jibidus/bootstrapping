@@ -165,4 +165,7 @@ brew :install, 'gpg-suite'
 additional_operations.add "Generate a new GPG key: https://docs.github.com/fr/authentication/managing-commit-signature-verification/generating-a-new-gpg-key"
 additional_operations.add "Sign all commit with this GPG key: https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits"
 
+# Clipboard manager
+brew :install, 'maccy'
+
 additional_operations.print
