@@ -168,4 +168,10 @@ additional_operations.add "Sign all commit with this GPG key: https://docs.githu
 # Clipboard manager
 brew :install, 'maccy'
 
+# CLI audio/video downloader (https://github.com/yt-dlp/yt-dlp)
+brew :install, 'yt-dlp'
+
+# Requierd by yt-dlp to merge audio and video in single file
+brew :install, 'ffmpeg'
+
 additional_operations.print
