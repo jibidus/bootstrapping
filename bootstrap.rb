@@ -50,10 +50,6 @@ brew :install, 'httpie'
 # Mysql server and client
 brew :install, 'mysql'
 
-# git diff good looking
-# https://github.com/so-fancy/diff-so-fancy
-brew :install, 'diff-so-fancy'
-
 # AsciiDoc text document format manipulation (http://asciidoc.org)
 brew :install, 'asciidoc'
 
@@ -173,5 +169,9 @@ brew :install, 'yt-dlp'
 
 # Requierd by yt-dlp to merge audio and video in single file
 brew :install, 'ffmpeg'
+
+# Enhance git diff
+# https://difftastic.wilfred.me.uk/introduction.html
+brew :install, 'difftastic'
 
 additional_operations.print
