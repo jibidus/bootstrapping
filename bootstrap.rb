@@ -103,14 +103,8 @@ brew_cask :install, 'yed'
 brew :tap, 'jcgay/jcgay'
 brew :install, 'mvndaemon/homebrew-mvnd/mvnd'
 
-# Dependencies of asdf
-# (https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
-brew :install, 'spack'
-brew :install, 'coreutils'
-asdf_home = File.join(Dir.home, ".asdf")
-unless Dir.exist?(asdf_home)
-    execute 'git clone https://github.com/asdf-vm/asdf.git #{asdf_home} --branch v0.13.1'
-end
+# Asdf
+brew :install, 'asdf'
 additional_operations.add "Register asdf as new zsh plugin in ~/.zshrc (search 'plugins=()')"
 
 # Java 11
@@ -118,7 +112,7 @@ additional_operations.add "asdf plugin add java"
 additional_operations.add "asdf plugin-add graalvm https://github.com/asdf-community/asdf-graalvm.git"
 additional_operations.add "asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
 additional_operations.add "asdf install java temurin-11.0.19+7"
-additional_operations.add "asdf global java temurin-11.0.19+7"
+additional_operations.add "asdf set -u java temurin-11.0.19+7"
 append_zsh_profile <<-TEXT
 # set JAVA_HOME from asdf
 . ~/.asdf/plugins/java/set-java-home.zsh
