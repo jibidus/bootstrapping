@@ -175,13 +175,15 @@ brew :install, 'difftastic'
 
 # Docker CLI + Colima (replace Docker Desktop)
 brew :install, 'docker'
+ENV['DOCKER_CONFIG'] = ENV['HOME'] + "/.docker"
 brew :install, 'colima'
 additional_operations.add "brew services start colima"
-execute 'DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}'
-execute 'mkdir -p $DOCKER_CONFIG/cli-plugins'
-execute 'curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-darwin-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose'
-execute 'chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose'
-execute "echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc\nsource ~/.zshrc"
+execute <<-EOF
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-darwin-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc
+EOF
 
 additional_operations.add "Install Lulu: https://objective-see.org/products/lulu.html"
 
