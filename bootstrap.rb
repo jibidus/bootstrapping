@@ -181,4 +181,6 @@ execute 'curl -SL https://github.com/docker/compose/releases/download/v2.29.2/do
 execute 'chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose'
 execute "echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc\nsource ~/.zshrc"
 
+additional_operations.add "Install Lulu: https://objective-see.org/products/lulu.html"
+
 additional_operations.print
