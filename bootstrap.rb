@@ -170,4 +170,14 @@ brew :install, 'ffmpeg'
 # https://difftastic.wilfred.me.uk/introduction.html
 brew :install, 'difftastic'
 
+# Docker CLI + Colima (replace Docker Desktop)
+brew :install, 'docker'
+brew :install, 'colima'
+execute 'colima start'
+execute 'DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}'
+execute 'mkdir -p $DOCKER_CONFIG/cli-plugins'
+execute 'curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-darwin-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose'
+execute 'chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose'
+execute "echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc\nsource ~/.zshrc"
+
 additional_operations.print
