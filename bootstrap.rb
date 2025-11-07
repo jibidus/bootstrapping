@@ -159,6 +159,7 @@ additional_operations.add "Sign all commit with this GPG key: https://docs.githu
 
 # Clipboard manager
 brew :install, 'maccy'
+additional_operations.add "Open Maccy to install it"
 
 # CLI audio/video downloader (https://github.com/yt-dlp/yt-dlp)
 brew :install, 'yt-dlp'
