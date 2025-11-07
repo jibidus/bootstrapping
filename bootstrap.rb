@@ -14,7 +14,9 @@ oh_my_zsh_home = File.join(Dir.home, ".oh-my-zsh")
 unless Dir.exist?(oh_my_zsh_home)
   execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 end
-additional_operations.add "Install other oh-my-zsh plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins"
+additional_operations.add "Install other oh-my-zsh plugins:"
+additional_operations.add " - https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md"
+additional_operations.add " - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md"
 additional_operations.add "Automate oh-my-zsh-update: https://github.com/ohmyzsh/ohmyzsh"
 additional_operations.add "Automate oh-my-zsh plugin updates: https://github.com/TamCore/autoupdate-oh-my-zsh-plugins"
 

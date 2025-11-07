@@ -60,7 +60,6 @@ class AdditionalOperations
     def initialize
         @instruction = [
           "Install Dbeaver Community Edition manually: https://dbeaver.io/download/",
-          "Install docker: https://www.docker.com/get-started/",
           "Configure Homebrew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh"
         ]
     end
