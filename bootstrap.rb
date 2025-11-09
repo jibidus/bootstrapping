@@ -86,7 +86,7 @@ brew_cask :install, 'google-chrome'
 #brew_cask :install, 'slack'
 
 # Remove associated preference files when trashing application
-brew_cask :install, 'apptrap'
+brew :install, 'pearcleaner'
 
 # Move window with keyboard
 brew_cask :install, 'rectangle'
