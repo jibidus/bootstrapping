@@ -126,7 +126,7 @@ asdfrc = File.join(Dir.home, ".asdfrc")
 append_text asdfrc_content, asdfrc
 
 # Ruby requirements (https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)
-execute 'xcode-select --install'
+execute 'xcode-select -p 1>/dev/null 2>/dev/null || xcode-select --install'
 brew :install, 'openssl@3 readline libyaml gmp autoconf'
 
 # ruby
