@@ -125,6 +125,21 @@ TEXT
 asdfrc = File.join(Dir.home, ".asdfrc")
 append_text asdfrc_content, asdfrc
 
+# Ruby requirements (https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)
+execute 'xcode-select --install'
+brew :install, 'openssl@3 readline libyaml gmp autoconf'
+
+# ruby
+execute 'asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git'
+execute 'asdf install ruby 3.2.2'
+execute 'asdf set -u ruby 3.2.2'
+asdf_config_for_ruby = <<-TEXT
+# Read .ruby-version like .tool-version
+legacy_version_file = yes
+TEXT
+append_text asdf_config_for_ruby, asdfrc
+
+
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
 brew_cask :install, 'openinterminal-lite'
