@@ -177,9 +177,12 @@ additional_operations.add "Open Maccy to install it"
 
 # CLI audio/video downloader (https://github.com/yt-dlp/yt-dlp)
 brew :install, 'yt-dlp'
+additional_operations.add "Give full disk access to iTerm (General > Security and confidentiality)"
 
 # Requierd by yt-dlp to merge audio and video in single file
 brew :install, 'ffmpeg'
+# Required by yt-dlp
+brew :install, 'certifi'
 
 # Enhance git diff
 # https://difftastic.wilfred.me.uk/introduction.html
@@ -198,5 +201,11 @@ echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc
 EOF
 
 additional_operations.add "Install Lulu: https://objective-see.org/products/lulu.html"
+
+# Custom aliases
+append_zsh_profile <<-TEXT
+# Custom aliases
+source ~/.aliases
+TEXT
 
 additional_operations.print
