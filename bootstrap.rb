@@ -208,4 +208,7 @@ append_zsh_profile <<-TEXT
 source ~/.aliases
 TEXT
 
+# macOS VM (https://github.com/insidegui/VirtualBuddy)
+brew :install, 'virtualbuddy'
+
 additional_operations.print
