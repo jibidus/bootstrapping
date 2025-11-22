@@ -200,6 +200,17 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 echo 'export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}' >> ~/.zshrc
 EOF
 
+# buildx
+brew :install, 'docker-buildx'
+additional_operations.add <<-TEXT
+Add this to ~/.docker/config.json:
+```
+"cliPluginsExtraDirs": [
+    "/opt/homebrew/lib/docker/cli-plugins"
+]
+```
+TEXT
+
 additional_operations.add "Install Lulu: https://objective-see.org/products/lulu.html"
 
 # Custom aliases
