@@ -222,4 +222,6 @@ TEXT
 # macOS VM (https://github.com/insidegui/VirtualBuddy)
 brew :install, 'virtualbuddy'
 
+brew_cask :install, 'vlc'
+
 additional_operations.print
