@@ -224,4 +224,7 @@ brew :install, 'virtualbuddy'
 
 brew_cask :install, 'vlc'
 
+# https://devtoys.app
+brew_cask :install, 'devtoys'
+
 additional_operations.print
