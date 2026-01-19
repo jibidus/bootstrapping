@@ -149,7 +149,8 @@ execute "defaults write com.googlecode.iterm2 OpenFileInNewWindows -bool false"
 # chezmoi
 # www.chezmoi.io
 brew :install, 'chezmoi'
-execute 'chezmoi init --apply jibidus'
+execute 'git config --global credential.helper osxkeychain'
+additional_operations.add "Setup chezmoi: chezmoi init --apply jibidus"
 
 # Postman alternative
 # paw.cloud
