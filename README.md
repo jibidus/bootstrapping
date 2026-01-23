@@ -22,4 +22,5 @@ cd bootstrapping
 # TODO
 - [ ] Take inspiration from https://github.com/nicolinuxfr/macOS-post-installation
 - [ ] Add documentation to scripts
-- [ ] Install AppStore app
+- [ ] Install AppStore app with [mas](https://github.com/mas-cli/mas)
+- [ ] Remplacer asdf par [mise](https://codeka.io/2025/12/19/adieu-direnv-bonjour-mise/)
