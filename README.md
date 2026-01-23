@@ -21,10 +21,5 @@ cd bootstrapping
 
 # TODO
 - [ ] Take inspiration from https://github.com/nicolinuxfr/macOS-post-installation
-- [ ] Split scripts
-- [ ] Schedule updates (update-all.sh)
-- [ ] Ruby upgrade / install
-  * Upgrade rbenv ruby versions lists : cd .rbenv/plugins/ruby-build && git pull
 - [ ] Add documentation to scripts
 - [ ] Install AppStore app
-- [ ] Replace rbenv by asdf in bootstrap.sh
