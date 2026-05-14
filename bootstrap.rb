@@ -231,4 +231,7 @@ brew_cask :install, 'devtoys'
 # https://sanebar.com (show hidden icons in menu bar, free plan)
 brew_cask :install, 'sane-apps/tap/sanebar'
 
+# https://github.com/tw93/mole (Cleaner as CLI)
+brew :install, 'mole'
+
 additional_operations.print
