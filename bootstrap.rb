@@ -228,4 +228,7 @@ brew_cask :install, 'vlc'
 # https://devtoys.app
 brew_cask :install, 'devtoys'
 
+# https://sanebar.com (show hidden icons in menu bar, free plan)
+brew_cask :install, 'sane-apps/tap/sanebar'
+
 additional_operations.print
