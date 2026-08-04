@@ -228,10 +228,11 @@ brew_cask :install, 'vlc'
 # https://devtoys.app
 brew_cask :install, 'devtoys'
 
-# https://sanebar.com (show hidden icons in menu bar, free plan)
-brew_cask :install, 'sane-apps/tap/sanebar'
-
 # https://github.com/tw93/mole (Cleaner as CLI)
 brew :install, 'mole'
+
+# Ice
+# (Following bug requires a manual installation: https://github.com/jordanbaird/Ice/issues/744)
+additional_operations.add "Install Ice manually: https://github.com/pdurlej/fire-from-ice/releases/tag/v0.11.13-fire.10.7.3"
 
 additional_operations.print
