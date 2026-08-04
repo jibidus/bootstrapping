@@ -42,10 +42,6 @@ brew :install, 'hub'
 # Gradle
 brew :install, 'gradle'
 
-# Spring boot CLI
-brew :tap, 'spring-io/tap'
-brew :install, 'spring-boot'
-
 # Better curl
 brew :install, 'httpie'
 
