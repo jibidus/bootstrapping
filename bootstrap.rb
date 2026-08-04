@@ -95,7 +95,6 @@ brew_cask :install, 'yed'
 # https://github.com/jcgay/homebrew-jcgay#maven-deluxe
 brew :tap, 'jcgay/jcgay'
 brew :unlink, 'maven'
-brew :install, 'maven-deluxe'
 brew :install, 'mvndaemon/homebrew-mvnd/mvnd'
 
 # Asdf
