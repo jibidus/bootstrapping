@@ -91,11 +91,8 @@ additional_operations.add "Import Rectangle configuration from 'assets/rectangle
 # yEd Graph Editor from yWorks
 brew_cask :install, 'yed'
 
-# Maven deluxe
-# https://github.com/jcgay/homebrew-jcgay#maven-deluxe
-brew :tap, 'jcgay/jcgay'
-brew :unlink, 'maven'
-brew :install, 'mvndaemon/homebrew-mvnd/mvnd'
+# Maven
+brew :install, 'maven'
 
 # Asdf
 brew :install, 'asdf'
