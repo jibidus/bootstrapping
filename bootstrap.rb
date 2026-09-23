@@ -91,43 +91,22 @@ brew_cask :install, 'yed'
 # Maven
 brew :install, 'maven'
 
-# Asdf
-brew :install, 'asdf'
-additional_operations.add "Register asdf as new zsh plugin in ~/.zshrc (search 'plugins=()')"
+# Mise
+execute 'curl https://mise.run | sh'
+execute 'curl https://mise.run/zsh | sh'
+execute 'mise settings auto_update=true'
 
-# Java 11
-additional_operations.add "asdf plugin add java"
-additional_operations.add "asdf plugin-add graalvm https://github.com/asdf-community/asdf-graalvm.git"
-additional_operations.add "asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
-additional_operations.add "asdf install java temurin-11.0.19+7"
-additional_operations.add "asdf set -u java temurin-11.0.19+7"
-append_zsh_profile <<-TEXT
-# set JAVA_HOME from asdf
-. ~/.asdf/plugins/java/set-java-home.zsh
-TEXT
-asdfrc_content = <<-TEXT
-# This replaces /??? with asdf java version
-java_macos_integration_enable = yes
-# Plugins with support can read the versions files used by other version managers, for example, .ruby-version in the case of Ruby's rbenv.
-legacy_version_file = yes
-TEXT
-asdfrc = File.join(Dir.home, ".asdfrc")
-append_text asdfrc_content, asdfrc
+# Java
+execute 'mise use -g java@temurin-25'
+execute 'mise settings add idiomatic_version_file_enable_tools java'
 
 # Ruby requirements (https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)
 execute 'xcode-select -p 1>/dev/null 2>/dev/null || xcode-select --install'
 brew :install, 'openssl@3 readline libyaml gmp autoconf'
 
 # ruby
-execute 'asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git'
-execute 'asdf install ruby 3.2.2'
-execute 'asdf set -u ruby 3.2.2'
-asdf_config_for_ruby = <<-TEXT
-# Read .ruby-version like .tool-version
-legacy_version_file = yes
-TEXT
-append_text asdf_config_for_ruby, asdfrc
-
+execute 'mise use -g ruby@3.2.2'
+execute 'mise settings add idiomatic_version_file_enable_tools ruby'
 
 # OpenInTerminal
 # https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
