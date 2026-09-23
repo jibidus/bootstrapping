@@ -73,9 +73,6 @@ additional_operations.add "Configure iTerm2 like this: https://gist.github.com/k
 # SublimeText 3
 brew_cask :install, 'sublime-text'
 
-# Mardkdown editor
-brew_cask :install, 'macdown'
-
 # Applications
 brew_cask :install, 'firefox'
 brew_cask :install, 'google-chrome'
