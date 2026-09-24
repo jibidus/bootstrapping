@@ -131,10 +131,6 @@ brew_cask :install, 'notion'
 # https://github.com/wagoodman/dive
 brew :install, 'dive'
 
-# Disk Inventory X
-# https://www.derlien.com
-brew_cask :install, 'disk-inventory-x'
-
 # Sign commit with a GPG key
 brew :install, 'gpg-suite'
 additional_operations.add "Generate a new GPG key: https://docs.github.com/fr/authentication/managing-commit-signature-verification/generating-a-new-gpg-key"
